@@ -29,5 +29,13 @@ public class PlayerMovement : MonoBehaviour {
 			Debug.Log ("RightArrow Pressed");
 			this.transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 		}
+
+		if (Input.GetKey (KeyCode.W)) {
+			Debug.Log ("W Pressed");
+			this.transform.Translate (new Vector3 (0, speed * Time.deltaTime, 0));
+		} else if (Input.GetKey (KeyCode.S)) {
+			Debug.Log ("S Pressed");
+			this.transform.Translate (new Vector3 (0, -speed * Time.deltaTime, 0));
+		}
 	}
 }
