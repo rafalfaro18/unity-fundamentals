@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey(KeyCode.UpArrow)){
 			Debug.Log("UpArrow Pressed");
+			this.transform.Translate(new Vector3(0,0, speed * Time.deltaTime));
 		}
 	}
 }
