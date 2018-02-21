@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour {
 		} else if (Input.GetKey (KeyCode.DownArrow)) {
 			Debug.Log ("DownArrow Pressed");
 			this.transform.Translate (new Vector3 (0, 0, -speed * Time.deltaTime));
-		} else if (Input.GetKey (KeyCode.LeftArrow)) {
+		}
+
+		if (Input.GetKey (KeyCode.LeftArrow)) {
 			Debug.Log ("LeftArrow Pressed");
 			this.transform.Translate (new Vector3 (-speed * Time.deltaTime, 0, 0));
 		} else if (Input.GetKey (KeyCode.RightArrow)) {
