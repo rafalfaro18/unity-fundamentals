@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 5.0f;
+	public float rotateSpeed = 100.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,15 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		Movement ();
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			Debug.Log ("LeftArrow Pressed: Rotate");
+			this.transform.Rotate (new Vector3 (0, -rotateSpeed * Time.deltaTime, 0));
+		} else if (Input.GetKey (KeyCode.RightArrow)) {
+			Debug.Log ("RightArrow Pressed: Rotate");
+			this.transform.Rotate (new Vector3(0,rotateSpeed*Time.deltaTime,0));
+		}
+
+		//Movement ();
 	}
 
 	void Movement() {
