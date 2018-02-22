@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float moveSpeed = 5.0f;
 	public float rotateSpeed = 100.0f;
+	public bool canMoveSideways = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,15 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKey (KeyCode.LeftArrow)) {
-			Debug.Log ("LeftArrow Pressed: Rotate");
-			this.transform.Rotate (new Vector3 (0, -rotateSpeed * Time.deltaTime, 0));
-		} else if (Input.GetKey (KeyCode.RightArrow)) {
-			Debug.Log ("RightArrow Pressed: Rotate");
-			this.transform.Rotate (new Vector3(0,rotateSpeed*Time.deltaTime,0));
-		}
-
-		//Movement ();
+		Movement ();
 	}
 
 	void Movement() {
@@ -37,11 +30,21 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			Debug.Log ("LeftArrow Pressed");
-			this.transform.Translate (new Vector3 (-moveSpeed * Time.deltaTime, 0, 0));
+			if (canMoveSideways) {
+				Debug.Log ("LeftArrow Pressed");
+				this.transform.Translate (new Vector3 (-moveSpeed * Time.deltaTime, 0, 0));
+			} else {
+				Debug.Log ("LeftArrow Pressed: Rotate");
+				this.transform.Rotate (new Vector3 (0, -rotateSpeed * Time.deltaTime, 0));
+			}
 		} else if (Input.GetKey (KeyCode.RightArrow)) {
-			Debug.Log ("RightArrow Pressed");
-			this.transform.Translate (new Vector3 (moveSpeed * Time.deltaTime, 0, 0));
+			if (canMoveSideways) {
+				Debug.Log ("RightArrow Pressed");
+				this.transform.Translate (new Vector3 (moveSpeed * Time.deltaTime, 0, 0));
+			} else {
+				Debug.Log ("RightArrow Pressed: Rotate");
+				this.transform.Rotate (new Vector3(0,rotateSpeed*Time.deltaTime,0));
+			}
 		}
 
 		if (Input.GetKey (KeyCode.W)) {
