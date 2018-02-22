@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		Movement ();
+	}
+
+	void Movement() {
+		
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			Debug.Log ("UpArrow Pressed");
 			this.transform.Translate (new Vector3 (0, 0, speed * Time.deltaTime));
