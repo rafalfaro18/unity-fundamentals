@@ -20,11 +20,19 @@ public class ObjectScaling : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown(KeyCode.G)){
-			this.transform.localScale = new Vector3(scaleAmount, scaleAmount, scaleAmount);
-			//this.transform.localScale = Vector3.one * scaleAmount; //same as above
+			EnableScale ();
 		} else if(Input.GetKeyUp(KeyCode.G)){
-			this.transform.localScale = originalScale;
+			DisableScale ();
 		}
 
+	}
+
+	public void EnableScale(){
+		this.transform.localScale = new Vector3(scaleAmount, scaleAmount, scaleAmount);
+		//this.transform.localScale = Vector3.one * scaleAmount; //same as above
+	}
+
+	public void DisableScale(){
+		this.transform.localScale = originalScale;
 	}
 }

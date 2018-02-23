@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightBulb: {fileID: 45982279}
+  wall: {fileID: 523344447}
 --- !u!23 &441809273
 MeshRenderer:
   m_ObjectHideFlags: 0

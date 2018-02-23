@@ -5,16 +5,19 @@ using UnityEngine;
 public class TriggerEvent : MonoBehaviour {
 
 	public GameObject lightBulb = null;
+	public GameObject wall = null;
 
 	void OnTriggerEnter (Collider other){
 		if (other.name == "player") {
 			lightBulb.SetActive (true);
+			wall.GetComponent<ObjectScaling> ().EnableScale ();
 		}
 	}
 
 	void OnTriggerExit (Collider other){
 		if (other.name == "player") {
 			lightBulb.SetActive (false);
+			wall.GetComponent<ObjectScaling> ().DisableScale ();
 		}
 	}
 
