@@ -8,7 +8,7 @@ public class ObjectColor : MonoBehaviour {
 	public Color originalColor = Color.white;
 
 	void Awake (){
-		originalColor = this.renderer.material.color;
+		originalColor = this.GetComponent<Renderer>().material.color;
 	}
 
 	// Use this for initialization
@@ -19,9 +19,9 @@ public class ObjectColor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.G)) {
-			this.renderer.material.color = changedColor;
+			this.GetComponent<Renderer>().material.color = changedColor;
 		} else if (Input.GetKeyUp (KeyCode.G)) {
-			this.renderer.material.color = originalColor;
+			this.GetComponent<Renderer>().material.color = originalColor;
 		}
 	}
 }
