@@ -11,6 +11,7 @@ public class TriggerEvent : MonoBehaviour {
 		if (other.name == "player") {
 			lightBulb.SetActive (true);
 			wall.GetComponent<ObjectScaling> ().EnableScale ();
+			wall.GetComponent<ObjectColor> ().EnableColor();
 		}
 	}
 
@@ -18,6 +19,8 @@ public class TriggerEvent : MonoBehaviour {
 		if (other.name == "player") {
 			lightBulb.SetActive (false);
 			wall.GetComponent<ObjectScaling> ().DisableScale ();
+			wall.GetComponent<ObjectColor> ().DisableColor();
+
 		}
 	}
 
