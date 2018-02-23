@@ -12,6 +12,12 @@ public class TriggerEvent : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit (Collider other){
+		if (other.name == "player") {
+			lightBulb.SetActive (false);
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		
