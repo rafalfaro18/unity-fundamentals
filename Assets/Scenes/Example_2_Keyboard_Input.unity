@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 523344449}
   - component: {fileID: 523344448}
   - component: {fileID: 523344452}
+  - component: {fileID: 523344453}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -232,7 +233,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e1b9f09a689104f0b92546fc9e7b4faa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -297,6 +298,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleAmount: 3
   originalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &523344453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523344447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7056d08204948dd94809e61564b6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &658600953
 GameObject:
   m_ObjectHideFlags: 0
