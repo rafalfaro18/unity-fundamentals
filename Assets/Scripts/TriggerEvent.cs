@@ -11,7 +11,7 @@ public class TriggerEvent : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		if (other.name == "player") {
 			lightBulb.SetActive (true);
-			audio.PlayOneShot (lightBulbOn);
+			//audio.PlayOneShot (lightBulbOn);
 			wall.GetComponent<ObjectScaling> ().EnableScale ();
 			wall.GetComponent<ObjectColor> ().EnableColor();
 		}
@@ -20,7 +20,7 @@ public class TriggerEvent : MonoBehaviour {
 	void OnTriggerExit (Collider other){
 		if (other.name == "player") {
 			lightBulb.SetActive (false);
-			audio.Stop ();
+			//audio.Stop ();
 			wall.GetComponent<ObjectScaling> ().DisableScale ();
 			wall.GetComponent<ObjectColor> ().DisableColor();
 
