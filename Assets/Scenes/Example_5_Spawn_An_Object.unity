@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnType: {fileID: 1546239655337618, guid: 05132db307ec641259c1085e2cc6e9f0, type: 2}
+  scaleMin: 0.2
+  scaleMax: 2
 --- !u!1 &905023071
 GameObject:
   m_ObjectHideFlags: 0
