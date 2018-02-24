@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour {
 			float scaleSize = Random.Range (scaleMin, scaleMax);
 			obj.transform.localScale = Vector3.one * scaleSize;
 			obj.AddComponent<Rigidbody> ();
-			obj.rigidbody.AddRelativeForce (Vector3.back * 100);
+			obj.GetComponent<Rigidbody>().AddRelativeForce (Vector3.back * 100);
 			obj.name = "mySphere";
 		}
 	}
