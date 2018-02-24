@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour {
 			GameObject obj = Instantiate (spawnType) as GameObject;
 			obj.transform.position = this.transform.position;
 			obj.AddComponent<Rigidbody> ();
+			obj.name = "mySphere";
 		}
 	}
 }
