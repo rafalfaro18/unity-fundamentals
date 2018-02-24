@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TriggerExamples : MonoBehaviour {
 
+	void OnTriggerEnter (Collider other) {
+		Debug.Log ("Object: " + other.name + " entered trigger.");
+	}
+
 	// Use this for initialization
 	void Start () {
 		
