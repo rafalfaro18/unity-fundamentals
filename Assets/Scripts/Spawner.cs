@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.touchCount >= 1) {
 			GameObject obj = Instantiate (spawnType) as GameObject;
 			obj.transform.position = this.transform.position;
 			float scaleSize = Random.Range (scaleMin, scaleMax);
