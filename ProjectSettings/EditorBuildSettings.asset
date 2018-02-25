@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Example_3_TriggerEvents.unity
+    guid: d561312affad044d08fb47ae46a98fc7
+  - enabled: 1
+    path: Assets/Scenes/Example_5_Spawn_An_Object.unity
+    guid: 9ae17a9be82f3445494d01e9d0e93236
