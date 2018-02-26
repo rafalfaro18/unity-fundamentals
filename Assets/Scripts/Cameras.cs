@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Cameras : MonoBehaviour {
 
+
+	public Transform player = null;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,5 +15,9 @@ public class Cameras : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void LateUpdate () {
+		this.transform.LookAt (player.position);
 	}
 }
