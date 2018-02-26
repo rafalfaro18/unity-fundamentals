@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1158755961}
-  target: {fileID: 0}
+  target: {fileID: 352028079}
 --- !u!1 &906327437
 GameObject:
   m_ObjectHideFlags: 0
