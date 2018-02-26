@@ -469,6 +469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1158755961}
   target: {fileID: 352028079}
+  speed: {x: 4, y: 2, z: 1}
+  nextPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &906327437
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,8 +654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56a9e020c5884fa2b7bb300c5c3f1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  rotateSpeed: 120
+  moveSpeed: 5
+  rotateSpeed: 100
   canMoveSideways: 0
 --- !u!1 &1217207150
 GameObject:
