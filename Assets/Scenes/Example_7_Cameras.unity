@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras: {fileID: 876400021}
-  cameraState: 2
+  cameraState: 3
 --- !u!1 &768049177
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras: {fileID: 876400021}
-  cameraState: 3
+  cameraState: 2
 --- !u!1 &1158755957
 GameObject:
   m_ObjectHideFlags: 0
