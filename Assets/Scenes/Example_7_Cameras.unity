@@ -471,6 +471,7 @@ MonoBehaviour:
   target: {fileID: 352028079}
   speed: {x: 4, y: 2, z: 1}
   nextPosition: {x: 0, y: 0, z: 0}
+  cameraState: 3
 --- !u!1 &906327437
 GameObject:
   m_ObjectHideFlags: 0
