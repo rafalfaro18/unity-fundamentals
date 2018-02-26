@@ -19,7 +19,7 @@ public class Cameras : MonoBehaviour {
 	}
 
 	void LateUpdate () {
-		//this.transform.LookAt (player.position);
+		this.transform.LookAt (player.position);
 		this.transform.position = target.position;
 
 	}
