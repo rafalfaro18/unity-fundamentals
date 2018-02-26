@@ -6,7 +6,7 @@ public class Cameras : MonoBehaviour {
 
 
 	public Transform player = null;
-	public Transform target = null;
+	public Transform target = null; 
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +19,8 @@ public class Cameras : MonoBehaviour {
 	}
 
 	void LateUpdate () {
-		this.transform.LookAt (player.position);
+		//this.transform.LookAt (player.position);
+		this.transform.position = target.position;
+
 	}
 }
