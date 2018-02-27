@@ -28,7 +28,8 @@ public class Raycaster : MonoBehaviour {
 			hits = Physics.RaycastAll (ray);
 			if(hits.Length > 0){
 				for(int i=0; i<hits.Length; i++){
-					Debug.Log ("Hit " + hits[i].collider.name);
+					RaycastHit hit = hits[i];
+					Debug.Log ("Hit " + hit.collider.name);
 				}
 			}
 		}
