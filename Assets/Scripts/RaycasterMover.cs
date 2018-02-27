@@ -36,6 +36,9 @@ public class RaycasterMover : MonoBehaviour {
 				}
 			}
 			//Drop Object
+			if(Input.GetMouseButtonUp(0)){
+				hitObject = null;
+			}
 		}
 	}
 }
