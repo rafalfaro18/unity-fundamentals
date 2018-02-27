@@ -18,8 +18,10 @@ public class Raycaster : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0)){
 			ray = camera.ScreenPointToRay (Input.mousePosition);
-			if(Physics.Raycast(ray)){
-				Debug.Log ("Hit Something");
+			if(Physics.Raycast(ray, out hit )){
+				if(hit.collider){
+					Debug.Log ("Hit " + hit.collider.name);
+				}
 			}
 		}
 	}
