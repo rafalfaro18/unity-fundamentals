@@ -24,5 +24,6 @@ public class Raycaster : MonoBehaviour {
 				}
 			}
 		}
+		Debug.DrawLine (ray.origin, hit.point, Color.red);
 	}
 }
