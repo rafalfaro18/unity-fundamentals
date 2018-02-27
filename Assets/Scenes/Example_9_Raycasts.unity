@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1841250950}
+  obj: {fileID: 1989752288331116, guid: de3b4eb28a8984ea3a6ae034c58f84ff, type: 2}
 --- !u!4 &1506884078
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Raycaster : MonoBehaviour {
 
 	public Camera camera;
-
+	public GameObject obj;
 	private Ray ray;
 	private RaycastHit hit;
 
@@ -21,6 +21,7 @@ public class Raycaster : MonoBehaviour {
 			if(Physics.Raycast(ray, out hit )){
 				if(hit.collider){
 					Debug.Log ("Hit " + hit.collider.name);
+					Instantiate(obj, hit.point, hit.transform.rotation);
 				}
 			}
 		}
