@@ -18,7 +18,7 @@ public class ClickAndMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonDown(0)){
+//		if(Input.GetMouseButtonDown(0)){
 			ray = camera.ScreenPointToRay (Input.mousePosition);
 
 			if(Physics.Raycast(ray, out hit)){
@@ -27,7 +27,7 @@ public class ClickAndMove : MonoBehaviour {
 
 				}
 			}
-		}
+//		}
 
 		player.transform.position = Vector3.Lerp (player.transform.position, moveToPosition, speed * Time.deltaTime);
 	}
