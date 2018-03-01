@@ -5,6 +5,7 @@ using UnityEngine;
 public class RunTimeCreation : MonoBehaviour {
 
 	public PrimitiveType primitiveType = PrimitiveType.Cube;
+	public GameObject myGameObject;
 
 	// Use this for initialization
 	void Start () {
@@ -16,9 +17,10 @@ public class RunTimeCreation : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.A)){
 			CreatePrimitiveCube ();
 		}
-		if (Input.GetKeyDown (KeyCode.S)) {
+		if (Input.GetKeyDown (KeyCode.S)) {  
 			CreateTriangle ();
 		}
+		UpdateMeshVertices (myGameObject);
 	}
 
 	void CreatePrimitiveCube(){
@@ -48,5 +50,23 @@ public class RunTimeCreation : MonoBehaviour {
 		MeshCollider meshCollider = obj.AddComponent<MeshCollider> ();
 		obj.layer = 0;
 		obj.tag = "Player";
+		myGameObject = obj;
+	}
+
+	void UpdateMeshVertices(GameObject obj){
+		if(!obj){
+			return;
+		}
+		Mesh mesh = obj.GetComponent<MeshFilter> ().mesh;
+		Vector3[] vertices = mesh.vertices;
+		Vector3[] normals = mesh.normals;
+		int i = 0;
+		while(i<vertices.Length){
+			vertices [i] += normals [i] * Mathf.Sin (Time.time);
+			i++;
+		}
+		mesh.vertices = vertices;
+		mesh.RecalculateNormals ();
+		mesh.RecalculateBounds ();
 	}
 }
