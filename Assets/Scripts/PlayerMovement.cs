@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -54,5 +55,10 @@ public class PlayerMovement : MonoBehaviour {
 			Debug.Log ("S Pressed");
 			this.transform.Translate (new Vector3 (0, -moveSpeed * Time.deltaTime, 0));
 		}
+
+        if (Input.GetKey(KeyCode.Return)) {
+            Debug.Log("Return Pressed");
+            SceneManager.LoadScene(1);
+        }
 	}
 }
