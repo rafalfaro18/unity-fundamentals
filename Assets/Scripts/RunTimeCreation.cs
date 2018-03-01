@@ -21,6 +21,11 @@ public class RunTimeCreation : MonoBehaviour {
 			CreateTriangle ();
 		}
 		UpdateMeshVertices (myGameObject);
+
+		if (Input.GetKeyDown (KeyCode.D)) {
+			CreateFromResources ();
+		}
+
 	}
 
 	void CreatePrimitiveCube(){
@@ -68,5 +73,10 @@ public class RunTimeCreation : MonoBehaviour {
 		mesh.vertices = vertices;
 		mesh.RecalculateNormals ();
 		mesh.RecalculateBounds ();
+	}
+
+	void CreateFromResources(){
+		GameObject obj = Resources.Load ("Cube") as GameObject;
+		Instantiate (obj);
 	}
 }
